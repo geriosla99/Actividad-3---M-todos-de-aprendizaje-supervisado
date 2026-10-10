@@ -1,0 +1,76 @@
+|--- num__dia_semana <= 4.50
+|   |--- num__hora <= 19.50
+|   |   |--- num__hora <= 16.50
+|   |   |   |--- num__hora <= 9.50
+|   |   |   |   |--- num__hora <= 8.50
+|   |   |   |   |   |--- class: alta
+|   |   |   |   |--- num__hora >  8.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |--- num__hora >  9.50
+|   |   |   |   |--- cat__estacion_La Estrella <= 0.50
+|   |   |   |   |   |--- class: media
+|   |   |   |   |--- cat__estacion_La Estrella >  0.50
+|   |   |   |   |   |--- class: baja
+|   |   |--- num__hora >  16.50
+|   |   |   |--- num__es_festivo <= 0.50
+|   |   |   |   |--- cat__estacion_La Estrella <= 0.50
+|   |   |   |   |   |--- class: alta
+|   |   |   |   |--- cat__estacion_La Estrella >  0.50
+|   |   |   |   |   |--- class: media
+|   |   |   |--- num__es_festivo >  0.50
+|   |   |   |   |--- class: baja
+|   |--- num__hora >  19.50
+|   |   |--- cat__estacion_San Antonio <= 0.50
+|   |   |   |--- num__evento_especial <= 0.50
+|   |   |   |   |--- cat__estacion_Acevedo <= 0.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |   |--- cat__estacion_Acevedo >  0.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |--- num__evento_especial >  0.50
+|   |   |   |   |--- cat__linea_Línea B <= 0.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |   |--- cat__linea_Línea B >  0.50
+|   |   |   |   |   |--- class: baja
+|   |   |--- cat__estacion_San Antonio >  0.50
+|   |   |   |--- num__evento_especial <= 0.50
+|   |   |   |   |--- num__dia_semana <= 2.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |   |--- num__dia_semana >  2.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |--- num__evento_especial >  0.50
+|   |   |   |   |--- num__hora <= 20.50
+|   |   |   |   |   |--- class: media
+|   |   |   |   |--- num__hora >  20.50
+|   |   |   |   |   |--- class: media
+|--- num__dia_semana >  4.50
+|   |--- num__hora <= 9.50
+|   |   |--- num__evento_especial <= 0.50
+|   |   |   |--- class: baja
+|   |   |--- num__evento_especial >  0.50
+|   |   |   |--- num__hora <= 5.50
+|   |   |   |   |--- num__dia_semana <= 5.50
+|   |   |   |   |   |--- class: media
+|   |   |   |   |--- num__dia_semana >  5.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |--- num__hora >  5.50
+|   |   |   |   |--- class: baja
+|   |--- num__hora >  9.50
+|   |   |--- num__hora <= 16.50
+|   |   |   |--- cat__estacion_San Antonio <= 0.50
+|   |   |   |   |--- cat__estacion_Acevedo <= 0.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |   |--- cat__estacion_Acevedo >  0.50
+|   |   |   |   |   |--- class: media
+|   |   |   |--- cat__estacion_San Antonio >  0.50
+|   |   |   |   |--- num__hora <= 14.50
+|   |   |   |   |   |--- class: media
+|   |   |   |   |--- num__hora >  14.50
+|   |   |   |   |   |--- class: media
+|   |   |--- num__hora >  16.50
+|   |   |   |--- num__evento_especial <= 0.50
+|   |   |   |   |--- class: baja
+|   |   |   |--- num__evento_especial >  0.50
+|   |   |   |   |--- cat__estacion_Acevedo <= 0.50
+|   |   |   |   |   |--- class: baja
+|   |   |   |   |--- cat__estacion_Acevedo >  0.50
+|   |   |   |   |   |--- class: media

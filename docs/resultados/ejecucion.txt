@@ -1,0 +1,42 @@
+{
+  "auditoria": {
+    "sha256": "f1f2abb5a494a6166e4791c2b1f6e99d6572eb5ae807cbe74b54d7cde4336248",
+    "filas_originales": 5000,
+    "duplicados_eliminados": 27,
+    "filas_utilizadas": 4973,
+    "estaciones": [
+      "Acevedo",
+      "Estadio",
+      "Itagüí",
+      "La Estrella",
+      "Niquía",
+      "Poblado",
+      "San Antonio",
+      "San Javier"
+    ],
+    "clases": {
+      "baja": 2418,
+      "media": 1749,
+      "alta": 806
+    }
+  },
+  "python": "3.12.14",
+  "sklearn": "1.9.1",
+  "semilla": 42,
+  "entrenamiento": 3978,
+  "prueba": 995,
+  "entradas": [
+    "estacion",
+    "linea",
+    "hora",
+    "dia_semana",
+    "es_festivo",
+    "lluvia",
+    "evento_especial"
+  ],
+  "cv_solo_entrenamiento": true,
+  "seleccion_por_cv": "bosque"
+}
+base_mayoritaria: accuracy=0.4864; F1 macro=0.2182; CV F1=0.2181
+arbol: accuracy=0.7518; F1 macro=0.7350; CV F1=0.7535
+bosque: accuracy=0.7960; F1 macro=0.7780; CV F1=0.7888

@@ -1,0 +1,17 @@
+test_columna_faltante (test_componente.DatosTest.test_columna_faltante) ... ok
+test_duplicados (test_componente.DatosTest.test_duplicados) ... ok
+test_etiqueta_incoherente (test_componente.DatosTest.test_etiqueta_incoherente) ... ok
+test_nulos (test_componente.DatosTest.test_nulos) ... ok
+test_rango (test_componente.DatosTest.test_rango) ... ok
+test_semilla_distinta (test_componente.DatosTest.test_semilla_distinta) ... ok
+test_semilla_reproducible (test_componente.DatosTest.test_semilla_reproducible) ... ok
+test_sin_fuga_pasajeros (test_componente.DatosTest.test_sin_fuga_pasajeros) ... ok
+test_umbral_clases (test_componente.DatosTest.test_umbral_clases) ... ok
+test_categoria_nueva (test_componente.SupervisadoTest.test_categoria_nueva) ... ok
+test_particiones_disjuntas (test_componente.SupervisadoTest.test_particiones_disjuntas) ... ok
+test_transformadores_independientes (test_componente.SupervisadoTest.test_transformadores_independientes) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.181s
+
+OK

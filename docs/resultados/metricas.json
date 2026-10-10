@@ -1,0 +1,182 @@
+{
+  "auditoria": {
+    "sha256": "f1f2abb5a494a6166e4791c2b1f6e99d6572eb5ae807cbe74b54d7cde4336248",
+    "filas_originales": 5000,
+    "duplicados_eliminados": 27,
+    "filas_utilizadas": 4973,
+    "estaciones": [
+      "Acevedo",
+      "Estadio",
+      "Itagüí",
+      "La Estrella",
+      "Niquía",
+      "Poblado",
+      "San Antonio",
+      "San Javier"
+    ],
+    "clases": {
+      "baja": 2418,
+      "media": 1749,
+      "alta": 806
+    }
+  },
+  "python": "3.12.14",
+  "sklearn": "1.9.1",
+  "semilla": 42,
+  "entrenamiento": 3978,
+  "prueba": 995,
+  "entradas": [
+    "estacion",
+    "linea",
+    "hora",
+    "dia_semana",
+    "es_festivo",
+    "lluvia",
+    "evento_especial"
+  ],
+  "cv_solo_entrenamiento": true,
+  "modelos": {
+    "base_mayoritaria": {
+      "accuracy_test": 0.4864321608040201,
+      "f1_macro_test": 0.21816542709037637,
+      "cv_accuracy_media": 0.4861739515185993,
+      "cv_f1_macro_media": 0.2180874719060844,
+      "cv_f1_macro_std": 0.00012009116646513043,
+      "cv_f1_folds": [
+        0.2180896027049873,
+        0.2180896027049873,
+        0.2180896027049873,
+        0.21789443974033307,
+        0.2182741116751269
+      ],
+      "reporte": {
+        "baja": {
+          "precision": 0.4864321608040201,
+          "recall": 1.0,
+          "f1-score": 0.6544962812711291,
+          "support": 484.0
+        },
+        "media": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 350.0
+        },
+        "alta": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 161.0
+        },
+        "accuracy": 0.4864321608040201,
+        "macro avg": {
+          "precision": 0.16214405360134002,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.21816542709037637,
+          "support": 995.0
+        },
+        "weighted avg": {
+          "precision": 0.23661624706446804,
+          "recall": 0.4864321608040201,
+          "f1-score": 0.318368040336911,
+          "support": 995.0
+        }
+      }
+    },
+    "arbol": {
+      "accuracy_test": 0.7517587939698492,
+      "f1_macro_test": 0.7350208877561434,
+      "cv_accuracy_media": 0.7684779242122562,
+      "cv_f1_macro_media": 0.7534548751596841,
+      "cv_f1_macro_std": 0.019885240581200326,
+      "cv_f1_folds": [
+        0.7766603590531879,
+        0.7246939937412337,
+        0.7471137691997677,
+        0.7752217576865054,
+        0.7435844961177259
+      ],
+      "reporte": {
+        "baja": {
+          "precision": 0.8808411214953271,
+          "recall": 0.7789256198347108,
+          "f1-score": 0.8267543859649122,
+          "support": 484.0
+        },
+        "media": {
+          "precision": 0.7408637873754153,
+          "recall": 0.6371428571428571,
+          "f1-score": 0.685099846390169,
+          "support": 350.0
+        },
+        "alta": {
+          "precision": 0.556390977443609,
+          "recall": 0.9192546583850931,
+          "f1-score": 0.6932084309133489,
+          "support": 161.0
+        },
+        "accuracy": 0.7517587939698492,
+        "macro avg": {
+          "precision": 0.7260319621047838,
+          "recall": 0.778441045120887,
+          "f1-score": 0.7350208877561434,
+          "support": 995.0
+        },
+        "weighted avg": {
+          "precision": 0.7791038952297032,
+          "recall": 0.7517587939698492,
+          "f1-score": 0.7553172124830411,
+          "support": 995.0
+        }
+      }
+    },
+    "bosque": {
+      "accuracy_test": 0.7959798994974875,
+      "f1_macro_test": 0.7780273753670944,
+      "cv_accuracy_media": 0.8104579501279986,
+      "cv_f1_macro_media": 0.7888218982662221,
+      "cv_f1_macro_std": 0.019967922858183034,
+      "cv_f1_folds": [
+        0.8151615713799738,
+        0.7851814597247927,
+        0.7565336964488388,
+        0.7836650899920933,
+        0.8035676737854116
+      ],
+      "reporte": {
+        "baja": {
+          "precision": 0.8640973630831643,
+          "recall": 0.8801652892561983,
+          "f1-score": 0.872057318321392,
+          "support": 484.0
+        },
+        "media": {
+          "precision": 0.7210682492581603,
+          "recall": 0.6942857142857143,
+          "f1-score": 0.7074235807860262,
+          "support": 350.0
+        },
+        "alta": {
+          "precision": 0.7454545454545455,
+          "recall": 0.7639751552795031,
+          "f1-score": 0.754601226993865,
+          "support": 161.0
+        },
+        "accuracy": 0.7959798994974875,
+        "macro avg": {
+          "precision": 0.7768733859319568,
+          "recall": 0.7794753862738052,
+          "f1-score": 0.7780273753670944,
+          "support": 995.0
+        },
+        "weighted avg": {
+          "precision": 0.7945881334580798,
+          "recall": 0.7959798994974875,
+          "f1-score": 0.7951404953655027,
+          "support": 995.0
+        }
+      }
+    }
+  },
+  "seleccion_por_cv": "bosque"
+}
