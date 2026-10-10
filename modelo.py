@@ -1,7 +1,10 @@
 """Aprendizaje supervisado: predicción del nivel de ocupación (baja/media/alta)
 con Árbol de Decisión y comparación con Random Forest."""
+import os
 import matplotlib
 matplotlib.use("Agg")
+os.makedirs("docs", exist_ok=True)
+os.makedirs("data", exist_ok=True)
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.compose import ColumnTransformer
@@ -23,7 +26,7 @@ df = df.dropna().drop_duplicates()
 # 3. Variables ----------------------------------------------------------------
 # OJO: 'pasajeros' NO se usa como entrada porque la etiqueta se deriva de ella
 # (data leakage). Solo se usa como entrada en un modelo de regresión.
-cat = ["estacion", "troncal"]
+cat = ["estacion", "linea"]
 num = ["hora", "dia_semana", "es_festivo", "lluvia", "evento_especial"]
 X, y = df[cat + num], df["nivel_ocupacion"]
 
@@ -50,7 +53,7 @@ for nombre, clf in modelos.items():
     print(classification_report(y_te, pred))
     ConfusionMatrixDisplay.from_predictions(y_te, pred, cmap="Blues")
     plt.title(nombre); plt.tight_layout()
-    plt.savefig(f"docs/matriz_{nombre.split()[0].lower()}.png", dpi=150)
+    plt.savefig(f"docs/matriz_{'arbol' if 'rbol' in nombre else 'rf'}.png", dpi=150)
     plt.close()
 
 # 5. Interpretación del árbol -------------------------------------------------
